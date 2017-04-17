@@ -1,0 +1,6 @@
+S = bblock* 
+bblock = block | <content>
+block = <'\\begin{'> key <'}'> nl* content <'\\end{'> <key> <'}'> <nl*>
+key = 'example' | 'exercise' | 'remark' | 'solution'
+content = #".*\r?\n" *
+nl = #"\r?\n"
